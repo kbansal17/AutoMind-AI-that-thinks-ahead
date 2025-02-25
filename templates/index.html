@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMind — AI-powered Automation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(106,17,203,0.2) 10%, rgba(0,0,0,1) 70%);
+            transition: background 0.1s ease;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: floatIn 2s ease-out forwards;
+        }
+
+        @keyframes floatIn {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .upload-container {
+            background: rgba(17, 17, 17, 0.95);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 50px rgba(106, 17, 203, 0.8);
+            max-width: 600px;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeIn 1s ease-out 2.5s forwards;
+            transition: transform 0.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .highlight {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #b3b3b3;
+            margin-bottom: 30px;
+        }
+
+        .file-input {
+            border: 2px solid #6a11cb;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #111;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease, transform 0.2s ease;
+        }
+
+        .file-input:hover {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .file-input label {
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        .file-input input {
+            display: none;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px #6a11cb;
+        }
+
+        .info {
+            font-size: 0.9rem;
+            color: #b3b3b3;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background" id="background"></div>
+
+    <div class="container" id="intro">
+        <div class="logo">AutoMind</div>
+    </div>
+
+    <div class="upload-container hidden" id="uploadForm">
+        <h1 id="uploadHeading">Upload File for <span class="highlight">AI Extraction</span></h1>
+        <p>Select a PDF or image file to extract text using AI-powered automation.</p>
+
+        <form action="/extract_text" method="POST" enctype="multipart/form-data">
+            <div class="file-input" id="fileInput" onclick="document.getElementById('file').click();">
+                <label for="file">Choose File</label>
+                <input type="file" id="file" name="file" accept=".pdf, .png, .jpg, .jpeg" required>
+            </div>
+
+            <button type="submit" class="btn">Extract Text</button>
+        </form>
+
+        <p class="info">Supported formats: PDF, JPG, PNG</p>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('uploadForm').classList.remove('hidden');
+        }, 2500);
+
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 40;
+            const y = (e.clientY / window.innerHeight - 0.5) * 40;
+
+            const fileInput = document.getElementById('fileInput');
+            fileInput.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+
+            const background = document.getElementById('background');
+            background.style.background = `radial-gradient(circle at ${e.clientX}px ${e.clientY}px, rgba(106,17,203,0.5), rgba(0,0,0,1))`;
+        });
+    </script>
+
+</body>
+</html>

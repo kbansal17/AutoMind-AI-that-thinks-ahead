@@ -1,0 +1,77 @@
+KHUSHI BANSAL              
+ 
+Objective  
+ 
+Aspiring Artificial Intelligence and Machine Learning engineer with a 
+strong foundation in computer science and a passion for solving 
+complex problems. Seeking to apply my skills in programming and 
+AI/ML algorithms in a dynamic environment to contribute meaningfully 
+to cutting-edge projects. Contact  
+ 
+📱 :8694063000, 
+ : khushibansal17june2003@gmail.com  
+ 
+ 
+Education  
+ 
+B. Tech in Computer Science 
+(Specialization: AI and ML) 
+SRM University of Science and 
+Technology  
+Expected Graduation: 2026  
+ Current CGPA: 9.49/10  
+ 
+Skills 
+ 
+Programming Languages: 
+Python, C, C++ 
+Concepts: OOPS, DSA, OS 
+Web Technologies: JavaScript, 
+HTML, CSS 
+Database: MySQL 
+Cloud Platforms:  
+Google Cloud, AWS 
+Other Tools:  Jupyter 
+Notebooks, Google Earth 
+Engine 
+ 
+Hobbies 
+ 
+Painting 
+Badminton 
+Reading 
+ 
+  Projects  
+ 
+Flood mapping using sentinel-1 SAR data 
+ Developed a cloud-based solution using google earth engine to a nalyze 
+flood-prone regions in assam, India. 
+ Utilized SAR data to extract and visualize insights starting from 2015. 
+Land use and land cover analysis for Madurantakam lake 
+ Employed SVM, Logistics Regression, ANN and Random Forest
+algorithms for satellite image classification from 1990 to 2020. 
+ Processed data using google cloud, enhancing predictions of land use 
+changes. 
+Ayurvedic plant classification model using VGG16 
+ Built a classification model to identify plants like neem and aloe vera with 
+high accuracy using machine learning. 
+ Designed a user- friendly frontend for prediction components and report 
+integration. 
+ 
+Website, Portfolios and Profiles 
+ 
+GITHUB:      https://github.com/kbansal17 
+Leetcode:   https://leetcode.com/u/BhqxznWmaH/ 
+LinkedIn: https://www.linkedin.com/in/khushi-bansal-a8a8712b3/  
+ 
+Co-Curricular Activities 
+ 
+ In addition to my studies, I have taken part in several Hackathons, 
+Quizzes and Coding Competitions during my time here as well as in my 
+school years. 
+ My greatest achievement is securing a 100% scholarship and achieving 
+a rank of 8th in the SRMJEE. 
+ 
+ 
+ 
+ 
